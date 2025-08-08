@@ -91,26 +91,26 @@
           <h1 class="title is-1 publication-title">Follow-Your-Shape: Shape-Aware Image Editing via Trajectory-Guided Region Control</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Zeqian Long</a><sup>1</sup>,</span>
+              <a href="https://keunhong.com">Zeqian Long</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Mingzhe Zheng</a><sup>2</sup>,</span>
+              <a href="https://utkarshsinha.com">Mingzhe Zheng</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Kunyu Feng</a><sup>2</sup>,
+              <a href="https://jonbarron.info">Kunyu Feng</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="http://sofienbouaziz.com">Xinhua Zhang</a>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Hongyu Liu</a><sup>2</sup>,
+              <a href="https://www.danbgoldman.com">Hongyu Liu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Harry Yang</a><sup>2</sup>,
+              <a href="https://homes.cs.washington.edu/~seitz/">Harry Yang</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Qifeng Chen</a><sup>2</sup>
+              <a href="http://www.ricardomartinbrualla.com">Qifeng Chen</a><sup>1</sup>
             </span>
             <span class="author-block">
-              <a href="https://mayuelala.github.io/">Yue Ma</a><sup>2</sup>
+              <a href="https://mayuelala.github.io/">Yue Ma</a><sup>1</sup>
             </span>
           </div>
 
@@ -274,11 +274,18 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Pipeline</h2>
         <div class="publication-video">
-          <img src="./static/images/pipeline.jpg" alt="Pipeline" style="width:100%;">
+          <img src="./static/images/pipeline.jpg" alt="Pipeline" style="width:100%; margin-bottom:10px;">
+          <p style="font-size:14px; text-align:justify;">
+            <b>Overview of our proposed pipeline.</b> Given a source image and a corresponding prompt, we first perform inversion to obtain the initial noisy latent code <i>x<sub>T</sub></i>. 
+            The editing process is then divided into three stages. <b>In Stage&nbsp;1</b>, we stabilize the initial denoising trajectory by injecting key-value (KV) features from the inversion path into the denoising model during its initial steps. 
+            <b>In Stage&nbsp;2</b>, we compute a Trajectory Divergence Map (TDM) by comparing the denoising trajectories generated from the source and edit prompts, and process this map to precisely identify the regions intended for editing. 
+            <b>In Stage&nbsp;3</b>, we perform the final edit: guided by the TDM, blended KV features are injected into the final attention blocks of the denoising model to introduce the new semantics, while ControlNet conditions are supplied to ensure the edited regions conform to the original structure.
+          </p>
         </div>
       </div>
     </div>
-    <!--/ Pipeline Image. -->
+    <!--/ Pipeline Image -->
+
   </div>
 </section>
 
