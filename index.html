@@ -275,12 +275,14 @@
         <h2 class="title is-3">Pipeline</h2>
         <div class="figure-block">
           <img src="./static/images/pipeline.jpg" alt="Pipeline" style="display:block; width:100%; height:auto; margin-bottom:16px;">
-          <p class="figure-caption">
-            <b>Overview of our proposed pipeline.</b> Given a source image and a corresponding prompt, we first perform inversion to obtain the initial noisy latent code <i>x<sub>T</sub></i>. 
-            The editing process is then divided into three stages. <b>In Stage&nbsp;1</b>, we stabilize the initial denoising trajectory by injecting key-value (KV) features from the inversion path into the denoising model during its initial steps. 
-            <b>In Stage&nbsp;2</b>, we compute a Trajectory Divergence Map (TDM) by comparing the denoising trajectories generated from the source and edit prompts, and process this map to precisely identify the regions intended for editing. 
-            <b>In Stage&nbsp;3</b>, we perform the final edit: guided by the TDM, blended KV features are injected into the final attention blocks of the denoising model to introduce the new semantics, while ControlNet conditions are supplied to ensure the edited regions conform to the original structure.
-          </p>
+          <div class="content has-text-justified">
+            <p class="figure-caption">
+              <b>Overview of our proposed pipeline.</b> Given a source image and a corresponding prompt, we first perform inversion to obtain the initial noisy latent code <i>x<sub>T</sub></i>. 
+              The editing process is then divided into three stages. <b>In Stage&nbsp;1</b>, we stabilize the initial denoising trajectory by injecting key-value (KV) features from the inversion path into the denoising model during its initial steps. 
+              <b>In Stage&nbsp;2</b>, we compute a Trajectory Divergence Map (TDM) by comparing the denoising trajectories generated from the source and edit prompts, and process this map to precisely identify the regions intended for editing. 
+              <b>In Stage&nbsp;3</b>, we perform the final edit: guided by the TDM, blended KV features are injected into the final attention blocks of the denoising model to introduce the new semantics, while ControlNet conditions are supplied to ensure the edited regions conform to the original structure.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -289,14 +291,32 @@
 </section>
 
 
-
 <section class="section">
   <div class="container is-max-desktop">
-
     <div class="columns is-centered">
+      <div class="column is-full-width has-text-centered">
+        <h2 class="title is-3">Results</h2>
+        <img src="./static/images/results.jpg" 
+             alt="Results" 
+             style="width:100%; max-width:900px; margin-bottom:16px;">
+        <p class="subtitle" style="font-size:16px;">
+          <b>Example qualitative results.</b> 
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered"> -->
 
       <!-- Visual Effects. -->
-      <div class="column">
+      <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
           <p>
@@ -308,11 +328,11 @@
                     type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -328,16 +348,16 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Matting. -->
 
     <!-- Animation. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Animation</h2> -->
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -367,11 +387,11 @@
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
+        <br/> -->
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
@@ -388,16 +408,16 @@
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
           </video>
-        </div>
+        </div> -->
         <!--/ Re-rendering. -->
 
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
     <!--/ Animation. -->
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -420,11 +440,11 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
-  </div>
-</section>
+  <!-- </div>
+</section> -->
 
 
 <section class="section" id="BibTeX">
