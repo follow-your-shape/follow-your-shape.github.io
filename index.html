@@ -250,32 +250,32 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- Abstract. -->
+    <!-- Abstract -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            While recent flow-based image editing models demonstrate general-purpose capabilities across diverse tasks, they often struggle to specialize in challenging scenarios---particularly those involving large-scale shape transformations. 
+            While recent flow-based image editing models demonstrate general-purpose capabilities across diverse tasks, they often struggle to specialize in challenging scenarios — particularly those involving large-scale shape transformations. 
             When performing such structural edits, these methods either fail to achieve the intended shape change or inadvertently alter non-target regions, resulting in degraded background quality. 
             We propose <b>Follow-Your-Shape</b>, a training-free and mask-free framework that supports precise and controllable editing of object shapes while strictly preserving non-target content. 
             Motivated by the divergence between inversion and editing trajectories, we compute a <b>Trajectory Divergence Map (TDM)</b> by comparing token-wise velocity differences between the inversion and denoising paths. 
-            The TDM enables precise localization of editable regions and guides a \textbf{Scheduled KV Injection} mechanism that ensures stable and faithful editing.
+            The TDM enables precise localization of editable regions and guides a <b>Scheduled KV Injection</b> mechanism that ensures stable and faithful editing.
             To facilitate a rigorous evaluation, we introduce <b>ReShapeBench</b>, a new benchmark comprising 120 new images and enriched prompt pairs specifically curated for shape-aware editing.
             Experiments demonstrate that our method achieves superior editability and visual fidelity, particularly in tasks requiring large-scale shape replacement.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+    <!--/ Abstract -->
 
     <!-- Pipeline Image -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Pipeline</h2>
-        <div class="publication-video">
-          <img src="./static/images/pipeline.jpg" alt="Pipeline" style="width:100%; margin-bottom:10px;">
-          <p style="font-size:14px; text-align:justify;">
+        <div class="figure-block">
+          <img src="./static/images/pipeline.jpg" alt="Pipeline" style="display:block; width:100%; height:auto; margin-bottom:16px;">
+          <p class="figure-caption">
             <b>Overview of our proposed pipeline.</b> Given a source image and a corresponding prompt, we first perform inversion to obtain the initial noisy latent code <i>x<sub>T</sub></i>. 
             The editing process is then divided into three stages. <b>In Stage&nbsp;1</b>, we stabilize the initial denoising trajectory by injecting key-value (KV) features from the inversion path into the denoising model during its initial steps. 
             <b>In Stage&nbsp;2</b>, we compute a Trajectory Divergence Map (TDM) by comparing the denoising trajectories generated from the source and edit prompts, and process this map to precisely identify the regions intended for editing. 
@@ -285,9 +285,9 @@
       </div>
     </div>
     <!--/ Pipeline Image -->
-
   </div>
 </section>
+
 
 
 <section class="section">
