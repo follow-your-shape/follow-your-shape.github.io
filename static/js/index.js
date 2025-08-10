@@ -19,6 +19,18 @@ function setInterpolationImage(i) {
   $('#interpolation-image-wrapper').empty().append(image);
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  bulmaCarousel.attach('#results-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,     // 一次只显示一张图
+    loop: true,         // 不循环
+    autoplay: false,     // 不自动播放
+    navigation: true,    // 显示左右箭头
+    pagination: true    // 不显示小圆点
+  });
+});
+
+
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
